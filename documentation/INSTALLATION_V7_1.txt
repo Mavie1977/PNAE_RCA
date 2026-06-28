@@ -1,0 +1,10 @@
+1. Copier les dossiers dans le projet Laravel.
+2. Lancer :
+php artisan migrate --seed
+php artisan db:seed --class=V7EnterpriseSeeder --force
+php artisan optimize:clear
+
+3. Git :
+git add .
+git commit -m "Develop SNAE-RCA V7.1 Enterprise"
+git push origin main
