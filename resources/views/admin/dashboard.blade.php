@@ -1,0 +1,2 @@
+@extends('layouts.app')
+@section('content')<main class="container"><section class="section"><h1 class="section-title">Administration nationale</h1><div class="kpi-grid"><div class="kpi"><strong>{{ $users }}</strong><span>Utilisateurs</span></div><div class="kpi"><strong>{{ $demandes }}</strong><span>Demandes</span></div><div class="kpi"><strong>{{ number_format($recettes,0,',',' ') }}</strong><span>Recettes FCFA</span></div><div class="kpi"><strong>{{ $ministeres }}</strong><span>Ministères</span></div></div></section></main>@endsection

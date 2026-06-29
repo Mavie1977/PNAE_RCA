@@ -1,37 +1,5 @@
-@extends('layouts.v7')
+@extends('layouts.app')
 @section('content')
-<section class="hero">
-    <h1>République Centrafricaine</h1>
-    <p>Système National d'Administration Électronique - SNAE-RCA V7 Enterprise</p>
-    <form class="searchbox" action="{{ route('themes.index') }}">
-        <input placeholder="Rechercher une démarche : acte de naissance, casier, permis...">
-        <button>Rechercher</button>
-    </form>
-</section>
-<main class="container">
-    <h2>Vos démarches par thème</h2>
-    <div class="theme-grid">
-        @foreach($themes as $theme)
-        <div class="theme-card">
-            <div class="theme-icon">{{ $theme->icone }}</div>
-            <h2>{{ $theme->nom }}</h2>
-            <p>{{ $theme->description }}</p>
-            <p><strong>{{ $theme->demarches_count }}</strong> démarches disponibles</p>
-            <a class="btn" href="{{ route('themes.show', $theme) }}">Voir les démarches</a>
-        </div>
-        @endforeach
-    </div>
-    <h2 style="margin-top:35px">Services les plus demandés</h2>
-    <table class="table">
-        <tr><th>Démarche</th><th>Coût</th><th>Délai</th><th>Action</th></tr>
-        @foreach($popularDemarches as $d)
-        <tr>
-            <td>{{ $d->nom }}</td>
-            <td>{{ number_format($d->cout,0,',',' ') }} FCFA</td>
-            <td>{{ $d->delai_traitement }}</td>
-            <td><a class="btn" href="{{ route('demarches.show', $d) }}">Faire la demande</a></td>
-        </tr>
-        @endforeach
-    </table>
-</main>
+<section class="hero"><div class="hero-content"><h2>Bienvenue sur le portail national</h2><h1>PNAE-RCA</h1><p>Une administration moderne au service des citoyens</p></div></section>
+<main class="container"><div class="home-grid"><section class="section"><h2 class="section-title">Démarches par thème</h2><div class="theme-grid">@foreach($themes as $theme)<div class="theme-card"><div class="theme-icon">{{ $theme->icone }}</div><h2>{{ $theme->nom }}</h2><p>{{ $theme->description }}</p><p><strong>{{ $theme->demarches_count }}</strong> démarches</p><a class="btn" href="{{ route('themes.show', $theme) }}">Voir plus</a></div>@endforeach</div></section><aside class="section"><h2 class="section-title">Chiffres clés</h2><div class="kpi-grid"><div class="kpi"><strong>{{ $totalDemandes }}</strong><span>Demandes reçues</span></div><div class="kpi"><strong>{{ number_format($totalPaiements,0,',',' ') }}</strong><span>FCFA encaissés</span></div><div class="kpi"><strong>7</strong><span>Jours délai moyen</span></div><div class="kpi"><strong>12</strong><span>Ministères connectés</span></div></div><br><a class="btn btn-blue" href="{{ route('login') }}">Accéder à mon espace</a></aside></div><div class="bottom-grid"><section class="section"><h2 class="section-title">Services populaires</h2><table class="table">@foreach($popularDemarches as $d)<tr><td>{{ $d->nom }}</td><td><a href="{{ route('demarches.show', $d) }}">›</a></td></tr>@endforeach</table></section><section class="section"><h2 class="section-title">Paiement en ligne</h2><p>Payez vos frais administratifs en toute sécurité.</p><a class="btn btn-yellow" href="{{ route('themes.index') }}">Démarrer une démarche</a></section><section class="section"><h2 class="section-title">Actualités</h2><p><strong>Lancement officiel du PNAE-RCA V7</strong><br>Une nouvelle ère pour l'administration électronique.</p></section></div></main>
 @endsection

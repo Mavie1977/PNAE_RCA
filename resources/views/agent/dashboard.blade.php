@@ -1,0 +1,2 @@
+@extends('layouts.app')
+@section('content')<main class="container"><section class="section"><h1 class="section-title">Tableau de bord agent</h1><a class="btn" href="{{ route('agent.fiche') }}">Imprimer ma fiche</a><table class="table"><tr><th>Référence</th><th>Objet</th><th>Statut</th></tr>@forelse($demandes as $d)<tr><td>{{ $d->reference }}</td><td>{{ $d->objet }}</td><td>{{ $d->statut }}</td></tr>@empty<tr><td colspan="3">Aucun dossier.</td></tr>@endforelse</table></section></main>@endsection

@@ -1,13 +1,2 @@
-@extends('layouts.v7')
-@section('content')
-<main class="container">
-<h1>Tableau de bord manager</h1>
-<div class="cards">
-<div class="card"><h3>Paiements</h3><p>{{ $paiements }}</p></div>
-<div class="card"><h3>Recettes</h3><p>{{ number_format($recettes,0,',',' ') }} FCFA</p></div>
-<div class="card"><h3>Dossiers en retard</h3><p>{{ $indicateurs->sum('demandes_retard') }}</p></div>
-<div class="card"><h3>Délai moyen</h3><p>{{ number_format($indicateurs->avg('delai_moyen'),1,',',' ') }} j</p></div>
-</div>
-<a class="btn" href="{{ route('manager.stats') }}">Voir statistiques détaillées</a>
-</main>
-@endsection
+@extends('layouts.app')
+@section('content')<main class="container"><section class="section"><h1 class="section-title">Tableau de bord manager</h1><div class="kpi-grid"><div class="kpi"><strong>{{ $demandesTotal }}</strong><span>Demandes reçues</span></div><div class="kpi"><strong>{{ $demandesTraitees }}</strong><span>Demandes traitées</span></div><div class="kpi"><strong>{{ $demandesEnAttente }}</strong><span>En attente</span></div><div class="kpi"><strong>{{ number_format($recettes,0,',',' ') }}</strong><span>Recettes FCFA</span></div></div></section></main>@endsection
