@@ -4,10 +4,9 @@
     "type": "project",
     "description": "PNAE-RCA V7 Enterprise",
     "require": {
-        "php": "^8.4",
-        "laravel/framework": "^13.0",
-        "laravel/tinker": "^2.10"
-    },
+          "php": "^8.4",
+          "laravel/framework": "^13.0"
+     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
         "laravel/pint": "^1.0",
