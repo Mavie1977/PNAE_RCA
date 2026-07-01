@@ -1,5 +1,5 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PNAE-RCA</title><link rel="stylesheet" href="/css/pnae-rca-v8.css"></head>
+<title>PNAE-RCA</title><link rel="stylesheet" href="/css/pnae-rca-v7.css"></head>
 <body><div class="rca-strip"><span></span><span></span><span></span><span></span><span></span></div>
 <div class="gov-header"><div class="brand"><img src="{{ asset('images/armoirie-rca.svg') }}" alt="Armoirie RCA">
 <div><h1>République Centrafricaine</h1><p class="devise"><span class="green">Unité</span> - <span class="yellow">Dignité</span> -
