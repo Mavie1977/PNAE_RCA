@@ -1,0 +1,13 @@
+INSTALLATION PNAE-RCA V8
+
+1) Copie les dossiers du ZIP à la racine du projet PNAE_RCA.
+2) Commit :
+   git add public/css/pnae-rca-v8.css resources/views
+   git commit -m "Apply PNAE RCA V8 Enterprise design"
+   git push origin main
+
+3) Railway Console :
+   php artisan view:clear
+   php artisan optimize:clear
+
+4) Recharge avec Ctrl+F5.

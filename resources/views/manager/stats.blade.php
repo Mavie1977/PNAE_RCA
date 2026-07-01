@@ -1,1 +1,4 @@
-@extends('layouts.app')@section('content')<main class='container'><section class='section'><h1 class='section-title'>Statistiques manager</h1><p>Module en préparation.</p></section></main>@endsection
+@extends('layouts.app')
+@section('content')
+<main class="container"><section class="section"><h1 class="section-title">Statistiques manager</h1><div class="kpi-grid"><div class="kpi"><strong>128</strong><span>Dossiers du mois</span></div><div class="kpi"><strong>86%</strong><span>Taux de traitement</span></div><div class="kpi"><strong>4 j</strong><span>Délai moyen</span></div><div class="kpi"><strong>15</strong><span>Alertes ouvertes</span></div></div></section><section class="section"><h2 class="section-title">Répartition par statut</h2><table class="table"><tr><th>Statut</th><th>Nombre</th><th>Pourcentage</th></tr><tr><td>Déposées</td><td>42</td><td>33%</td></tr><tr><td>En traitement</td><td>61</td><td>48%</td></tr><tr><td>Traitées</td><td>25</td><td>19%</td></tr></table></section></main>
+@endsection
