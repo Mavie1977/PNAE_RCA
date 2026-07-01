@@ -10,7 +10,7 @@
 <div class="rca-strip"><span></span><span></span><span></span><span></span><span></span></div>
 <header class="gov-header">
     <div class="brand">
-        <img src="{{ asset('images/armoirie-rca.svg') }}" alt="Armoirie République Centrafricaine">
+        <img src="{{ asset('images/armoirie-rca.svg') }}" alt="Armoirie RCA">
         <div>
             <h1>République Centrafricaine</h1>
             <p class="devise"><span class="green">Unité</span> - <span class="yellow">Dignité</span> - <span class="red">Travail</span></p>
@@ -57,13 +57,6 @@
     </div>
 </nav>
 @yield('content')
-<footer class="footer">
-    <div class="footer-grid">
-        <div><h3>République Centrafricaine</h3><p>Unité - Dignité - Travail</p><p>Plateforme Nationale d'Administration Électronique</p></div>
-        <div><h3>Services</h3><p>Démarches</p><p>Paiements</p><p>Suivi des demandes</p></div>
-        <div><h3>Institution</h3><p>Ministères</p><p>Statistiques</p><p>Administration</p></div>
-        <div><h3>Contact</h3><p>Bangui - RCA</p><p>contact@pnae-rca.cf</p></div>
-    </div>
-</footer>
+<footer class="footer"><div class="footer-grid"><div><h3>République Centrafricaine</h3><p>Unité - Dignité - Travail</p><p>Plateforme Nationale d'Administration Électronique</p></div><div><h3>Services</h3><p>Démarches</p><p>Paiements</p><p>Suivi des demandes</p></div><div><h3>Institution</h3><p>Ministères</p><p>Statistiques</p><p>Administration</p></div><div><h3>Contact</h3><p>Bangui - RCA</p><p>contact@pnae-rca.cf</p></div></div></footer>
 </body>
 </html>
